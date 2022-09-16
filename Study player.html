@@ -1,0 +1,839 @@
+<!DOCTYPE html> 
+<html> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .hamburg{
+    position: absolute;
+    top:50px;
+    left:5px;
+    height:0%;
+    width:40%;
+    padding:0px;
+    background-color:rgb(21, 33, 44);
+    z-index:3;
+    border-radius: 5px;
+    text-align:center;
+    overflow:scroll;
+    overflow-x: auto;
+    transition: 0.2s ease-out;
+  }
+  .hamburg canvas{
+    width: 85%;
+  }
+  .btn{
+    position: absolute;
+    top:5px;
+    left:5px;
+    z-index:3;
+    height:25px;
+    width:25px;
+    padding:8px;
+    background-color: rgb(17, 73, 119);
+    opacity:0.6;
+    border-radius: 5px;
+    transition: 0.1s ease-out;
+  }
+  .btn:hover{
+    opacity:1;
+  }
+</style>
+<body> 
+
+<span class="btn" id="btn90"><img onclick="hamburg()" style="height:inherit;width:inherit;" src="file:///C:/Users/ssb/Desktop/Him%20coder/Final%20video%20player/hamburger.png"></span>
+<div class="hamburg" id="hamburg">
+<span id="output"></span>
+</div>
+
+<div class="thepla23">
+  <center>
+  <p style="display:inline" id="br23">
+  </p>
+
+  <div class="btnpla23fe">
+   <video onmousemove="showme()"  onmouseout="hideme()"  style="text-align: center;" onclick="playpau()" ondblclick="openFullscreen()"  id="myVideo" width="98%" src="file:///C:/Users/ssb/Downloads/Physics%20Wallah/yt1s.com%20-%20CaLoRiMeTrY%20in%2040%20mins%20%20Theory%20%20Numericals%20%20%20Class%2010%20%2011%20%2012%20%20ICSE%20%20CBSE%20%20Part%2012.mp4" type="video/mp4">
+    </video>
+    <!--Hiding chapters
+      <button class="pic23s" onclick="togglePictureInPicture()"  onmouseover="this.style.visibility='visible';" onmouseout="this.style.visibility='hidden';">PIC</button>
+    -->
+  </div>
+</center>
+<!--Hiding chapters
+<div class='thenewchap' id="chapter23"><span style="border-bottom:2px dashed #4e4e4e" onclick="visibile()">Chapters</span>&nbsp;&nbsp;<span onclick="hidemeplz()" id='remove3' style='display:none;color:#000;font-size:22px;'>&times;</span><br>
+<div id="allcha">
+
+  <p><span onclick="gotofolow234(this.innerHTML);" style="color:blue;">7:03</span>&nbsp;&nbsp; Goto</p>
+  <p><span onclick="gotofolow234(this.innerHTML);" style="color:blue;">7:03</span>&nbsp;&nbsp; Goto</p>
+
+</div>
+</div>
+-->
+
+</div>
+
+<div class="goblinmaster" id="goblinmaster" onmouseover="showme();deiurb42=1"  onmouseout="hideme();deiurb42=0"  onmouseleave="document.getElementById('goplay21').style.width='98%';">
+  <div id="backGrond23" onmouseover="stoper23d=1;deiurb42=1" style="height:70px; background-color: transparent;backdrop-filter: blur(5px);"  onmouseout="stoper23d=0;deiurb42=0">
+   <span style="visibility:hidden; " id="shower2">
+    <hr style="border:none;height:5px;">
+    <input class="slider" style="width:98%;transition: width 0.1s ease-out;" onchange="mouseMove=false" onfocus="mouseMove=true" onmouseleave="mouseMove=false;" onclick="mouseMove=true" id="goplay21" type="range" min="0" max="10000" value="0"/>
+    
+    </span>
+    <div id="spacing" class="spacing"></div>
+    <span onmouseover="showme()"  onmouseover="deiurb42=1" onmouseout="hideme();deiurb42=0" style="visibility:hidden" id="speeder2">
+    <span onmouseover="showme()"  onmouseout="hideme()" style="float:left;margin-left:8px;">Speed: <input class="slider2" ondblclick="this.value='50';" type="range" id="speeders23d" onchange="setPlaySpeed(this.value)" min="0" max="100" 
+
+    value="50"></span>
+    &nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;
+    <span onclick="chatyp4e++" onmouseover="showme()"  onmouseout="hideme()" style="color:#ffffffe5;float:left;font-size:15px;" id="distim2"></span>
+<button style="transform:translateY(-5px);height:30px;width:30px;font-family: Arial,san-serif;border:1px solid #00052e;border-radius: 15px;color:#d1d1d1;background-color: #00031d;" onclick="vid.currentTime-=7">-7</button>
+    <input style="background-color: hsl(233, 14%, 13%);color:#d1d1d1;border-radius: 10px;float:right;" type="button" value="Capture" onclick="shoot()"/>
+    <!--<input type="button" value="Capture" onclick="capture2()"/>-->
+    <div onmouseover="showme()"  onmouseout="hideme()" class="addLin" style="margin-left:30px;text-align:center;overflow:hidden;float:right;border:none; width:400px; height:15px; transition: height 0.3s;background-color: #013c8a1c;" onclick="toogleChaLink(this); this.style.color='white';this.style.backgroundColor='#013c8a';" onmouseleave=" this.style.color='#ffffff70';this.style.backgroundColor='#013c8a1c';">
+      Change video:<br>
+      <b>Add video from local device:</b><br>
+      <input type="file" accept="video/*" onchange="start299()" id="getFil3"/><br>
+      <br>
+      <b>Add video from a URL / link on internet:</b>
+      <input type="text" onchange="vid.src=this.value;tgLink=2;"/><br>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button style="margin-left:10px;transform:translateY(-5px);height:30px;width:30px;font-family: Arial,san-serif;border:1px solid #252842;border-radius: 15px;color:#d1d1d1;background-color: #00031d;float:right;" onclick="vid.currentTime+=7">+7</button>
+    <span onmouseover="showme()"  onmouseout="hideme()" style="">Volume: <input class="slider2" type="range" id="vol45sdj3" onchange="vid.volume = (this.value/100);" min="0" max="100" value="100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+<!--
+      <button onclick="openFullscreen()" style="color:#ffffff75;">FullScreen</button>
+      <span onmouseover="showme()"  onmouseout="hideme()" style="float: right;">Brightness: <input class="slider2" id="bright23hefs" type="range" onchange="myBrightness(this.value)" min="0" max="100" value="100">&nbsp;&nbsp;<span>
+      -->    
+
+    </span>
+  </div>
+  </div> 
+<!--
+<br>
+<button onclick="openFullscreen()">FullScreen</button>
+<button onclick="playpau()" id="pla21">Play</button>
+-->
+
+<script>
+var vid = document.getElementById("myVideo");
+
+
+var cour67hd=1;
+    function hamburg(){
+      cour67hd++;
+      if(cour67hd%2==0)
+      {
+        document.getElementById("hamburg").style.height="70%";
+        document.getElementById("hamburg").style.padding="15px";
+      }else {
+        document.getElementById("hamburg").style.height="0%";
+        document.getElementById("hamburg").style.padding="0px";
+      }
+    }
+
+(function start299(){
+        var playSelectedFile = function (event) {
+        var file = this.files[0]
+        var type = file.type
+        var videoNode = document.querySelector('#myVideo')
+
+        var fileURL = URL.createObjectURL(file)
+        videoNode.src = fileURL
+        }
+        var inputNode = document.querySelector('#getFil3')
+        inputNode.addEventListener('change', playSelectedFile, false)
+        })()
+vid.currentTime=0;
+vid.volume = 1;
+function chaval24(gam33a){
+  vid.innerHTML='<source src="'+gam33a+'" type="video/mp4">';
+}
+
+var deiurb42=0;
+
+
+var go3sn34=1,duyf3e8=1;
+
+
+var time24ef=7, chatyp4e=0;
+var  stoper23d=0;
+function showme(){
+var dist1243sg=0, hadj32=0;
+document.getElementById("shower2").style.visibility='visible';
+document.getElementById("speeder2").style.visibility='visible';
+   document.getElementById("distim2").style.visibility='visible';
+   document.getElementById("goplay21").style.display='inline';
+   document.getElementById("backGrond23").style.backgroundColor="rgba(255, 255, 255, 0.023)";
+   document.getElementById('spacing').style.transition="none";
+   document.getElementById("spacing").style.boxShadow="20px 20px 80px 100px rgba(0,0,0,0.97)";
+   document.getElementById("backGrond23").style.backdropFilter="blur(2px)";
+         document.getElementsByClassName("pic23s")[0].style.visibility='visible';
+         document.getElementById('goblinmaster').style.visibility="visible";
+var x433dsdh=setInterval(function(){
+  if(stoper23d==0){
+  dist1243sg++;
+  if(dist1243sg>=time24ef){
+    hideme();
+    stoper23d=1;
+    dist1243sg=0;
+  }
+}
+ },1000);
+}
+  function hideme(){
+    document.getElementById("shower2").style.visibility='hidden';
+    document.getElementById("speeder2").style.visibility='hidden';
+   document.getElementById("distim2").style.visibility='hidden';
+   document.getElementById("goplay21").style.display='none';
+         document.getElementById('spacing').style.transition="0.5s ease-out";
+   document.getElementById("backGrond23").style.backdropFilter="blur(0px)";
+   document.getElementById("spacing").style.boxShadow="none";
+   document.getElementById("backGrond23").style.backgroundColor="transparent";
+         document.getElementsByClassName("pic23s")[0].style.visibility='hidden';
+         document.getElementById('goblinmaster').style.visibility="hidden";
+  }
+
+
+
+
+
+
+
+  
+var vsd3d6=1;
+function playpau(){
+vsd3d6++;
+if(vsd3d6%2==0){
+vid.play();
+go3sn34=0;
+document.getElementById("pla21").innerHTML="Pause";
+document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+vid.currentTime=vid.currentTime+3;
+}else{
+vid.pause();
+go3sn34=0;
+document.getElementById("pla21").innerHTML="Play";
+document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+vid.currentTime=vid.currentTime+3;
+}
+
+}
+
+function setCurTime(duyf3e8) { 
+  go3sn34=1;
+  vid.currentTime=(document.getElementsByClassName("slider")[0].value/10000)*vid.duration;
+  document.getElementById("goplay21").value=document.getElementsByClassName("slider")[0].value;
+} 
+
+var min=0, sec=0;
+var reinte13=setInterval(function(){
+  var curhrs= Math.floor(vid.currentTime / (60*60));
+var curmins = Math.floor((vid.currentTime / 60)-curhrs*60);
+var cursec = Math.floor(vid.currentTime - (Math.floor(vid.currentTime / 60)) * 60);
+
+var durhrs= Math.floor(vid.duration / (60*60));
+var durmins = Math.floor((vid.duration / 60)-durhrs*60);
+var dursecs = Math.floor(vid.duration - (Math.floor(vid.duration / 60))  * 60);
+
+if(chatyp4e%2==0){
+}else{
+
+  
+  var curmins = Math.floor((vid.currentTime / 60)-curhrs*60);
+  var cursec = Math.floor(vid.currentTime - (Math.floor(vid.currentTime / 60)) * 60);
+  var durmins = Math.floor((vid.duration / 60)-durhrs*60);
+  var dursecs = Math.floor(vid.duration - (Math.floor(vid.duration / 60))  * 60);
+  
+  curmins=durmins-curmins;
+  curhrs=durhrs-curhrs;
+  if(dursecs>=cursec){
+    cursec=dursecs-cursec;
+  }else if(dursecs<cursec){
+    var dursecss=dursecs+60;
+    cursec=dursecss-cursec;
+    curmins--;
+  }
+
+}
+if(curmins<=-1){
+  curmins=curmins*-1;
+  curmins=59-curmins;
+  curhrs--;
+}
+
+if(cursec<10){
+cursec="0"+cursec;
+}
+if(dursecs<10){
+dursecs="0"+dursecs;
+}
+if(durmins<10){
+durmins="0"+durmins;
+}
+if(curmins<10){
+curmins="0"+curmins;
+}
+if(durhrs<10){
+  durhrs='0'+durhrs;
+}
+if(curhrs<10){
+  curhrs='0'+curhrs;
+}
+
+if(chatyp4e%2==0){
+  document.getElementById("distim2").innerHTML="&nbsp;"+curhrs+":"+curmins+':'+cursec+" / "+durhrs+':'+durmins+':'+dursecs;
+}else{
+  document.getElementById("distim2").innerHTML="-"+curhrs+":"+curmins+':'+cursec+" / "+durhrs+':'+durmins+':'+dursecs;
+}
+
+},1000);
+
+
+
+
+function setPlaySpeed(jam) { 
+jam=jam/50;
+  vid.playbackRate = jam;
+vid.playbackRate;
+} 
+setInterval(function(){
+  var jam=document.getElementById("speeders23d").value;
+  jam=jam/50;
+  vid.playbackRate = jam;
+  vid.playbackRate;
+},1);
+
+
+setInterval(function(){
+  jam=document.getElementById("vol45sdj3").value;
+  vid.volume = (jam/100);
+},1);
+
+
+
+function myBrightness(bright) {
+bright=bright+"%";
+  vid.style.filter = "brightness("+bright+")";
+}
+
+
+setInterval(function(){
+  jam=document.getElementById("bright23hefs").value;
+  jam=jam+"%";
+  vid.style.filter = "brightness("+jam+")";
+},1);
+
+
+
+var elem = document.body;
+
+
+elem.addEventListener("keyup", function(event) {
+  if (event.keyCode === 39) {
+   event.preventDefault();
+   vid.currentTime=vid.currentTime+10;
+   showme();
+   document.getElementById("shower2").style.visibility='visible';
+   document.getElementById("distim2").style.visibility='visible';
+  }else{
+  if (event.keyCode === 37) {
+   event.preventDefault();
+   vid.currentTime=vid.currentTime-10;
+   showme();
+   document.getElementById("shower2").style.visibility='visible';
+   document.getElementById("distim2").style.visibility='visible';
+  }
+}
+
+
+});
+
+
+var bright23=100;
+elem.addEventListener("keyup", function(event) {
+  if (event.keyCode === 32) {
+   event.preventDefault();
+   playpau();
+  }else if (event.keyCode === 70 || event.keyCode === 106 || event.keyCode === 12) {
+   event.preventDefault();
+   openFullscreen();
+}else  if (event.keyCode === 40) {
+   event.preventDefault();
+   document.getElementById("vol45sdj3").value-=10;
+document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  showme();
+}else  if (event.keyCode === 13) {
+   event.preventDefault();
+   shoot();
+}else  if (event.keyCode === 38) {
+   event.preventDefault();
+   document.getElementById("vol45sdj3").value+=10;
+   showme();
+}else  if (event.keyCode === 36 || event.keyCode === 96) {
+   event.preventDefault();
+   vid.currentTime=0;
+   document.getElementsByClassName("slider")[0].value=0;
+}else  if (event.keyCode === 35) {
+   event.preventDefault();
+   vid.currentTime=vid.duration;
+   document.getElementsByClassName("slider")[0].value=10000;
+   event.preventDefault();
+}else  if (event.keyCode === 97) {
+   event.preventDefault();
+   vid.currentTime=0.1*vid.duration;
+   document.getElementsByClassName("slider")[0].value=1000;
+   event.preventDefault();
+}else  if (event.keyCode === 98) {
+   event.preventDefault();
+   vid.currentTime=0.2*vid.duration;
+   document.getElementsByClassName("slider")[0].value=2000;
+   event.preventDefault();
+}else  if (event.keyCode === 99) {
+   event.preventDefault();
+   vid.currentTime=0.3*vid.duration;
+   document.getElementsByClassName("slider")[0].value=3000;
+   event.preventDefault();
+}else  if (event.keyCode === 100) {
+   event.preventDefault();
+   vid.currentTime=0.4*vid.duration;
+   document.getElementsByClassName("slider")[0].value=4000;
+   event.preventDefault();
+}else  if (event.keyCode ===101) {
+   event.preventDefault();
+   vid.currentTime=0.5*vid.duration;
+   document.getElementsByClassName("slider")[0].value=5000;
+   event.preventDefault();
+}else  if (event.keyCode === 102) {
+   event.preventDefault();
+   vid.currentTime=0.6*vid.duration;
+   document.getElementsByClassName("slider")[0].value=6000;
+   event.preventDefault();
+}else  if (event.keyCode === 103) {
+   event.preventDefault();
+   vid.currentTime=0.7*vid.duration;
+   document.getElementsByClassName("slider")[0].value=7000;
+   event.preventDefault();
+}else  if (event.keyCode === 104) {
+   event.preventDefault();
+   vid.currentTime=0.8*vid.duration;
+   document.getElementsByClassName("slider")[0].value=8000;
+   event.preventDefault();
+}else  if (event.keyCode === 105) {
+   event.preventDefault();
+   vid.currentTime=0.9*vid.duration;
+   document.getElementsByClassName("slider")[0].value=9000;
+   event.preventDefault();
+}else  if (event.keyCode === 106) {
+   event.preventDefault();
+   vid.currentTime=vid.duration;
+   document.getElementsByClassName("slider")[0].value=10000;
+   event.preventDefault();
+}else  if (event.keyCode === 81) {
+   event.preventDefault();
+if(bright23<=90){
+   bright23=bright23+10;
+   myBrightness(bright23);
+}
+
+}else  if (event.keyCode === 65) {
+   event.preventDefault();
+   bright23=bright23-10;
+   myBrightness(bright23);
+  
+}else  if (event.keyCode === 122) {
+   openFullscreen();  
+   event.preventDefault();
+   openFullscreen();  
+}
+
+});
+
+
+/* When the openFullscreen() function is executed, open the video in fullscreen.
+Note that we must include prefixes for different browsers, as they don't support the 
+
+requestFullscreen method yet */
+
+
+
+
+
+
+
+
+var xamw344=1;
+
+var vioder=vid.videoHeight/vid.videoWidth;
+      var vioderW=98/100*screen.width;
+      var vioderH=vioder*vioderW;
+
+
+var xam24=0;
+function openFullscreen() {
+xam24++;
+if(xam24%2==0){
+    //requesting fullScrenn
+   document.getElementById("btn90").style.opacity='0.1';
+    
+    xamw344=0;
+    console.log(vioder);
+    console.log(screen.height-vioderH);
+
+    vioder=vid.videoHeight/vid.videoWidth;
+    vioderW=98/100*screen.width;
+    vioderH=vioder*vioderW;
+    vid.style.paddingTop = ((screen.height-vioderH)/2)+"px";
+    
+    document.getElementsByClassName("goblinmaster")[0].style.bottom = "0px";
+    document.getElementsByClassName("goblinmaster")[0].style.position = "fixed";
+    document.getElementsByClassName("goblinmaster")[0].style.width = "99.3%";
+
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+
+
+  xamw344=1;
+}else{
+  document.getElementById("btn90").style.opacity='0.6';
+vid.style.paddingTop = "0px 0px";
+    document.getElementsByClassName("goblinmaster")[0].style.bottom = "0px";
+    document.getElementsByClassName("goblinmaster")[0].style.position = "fixed";
+    document.getElementsByClassName("goblinmaster")[0].style.width = "99.5%";
+  xamw344=1;
+document.getElementById("myVideo").controls = false;
+
+ if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+
+}
+
+
+}
+
+
+
+
+
+
+setInterval(function(){
+if(xamw344==1){
+  if(window.innerHeight == screen.height) {
+     console.log('FullScreen');
+     vioder=vid.videoHeight/vid.videoWidth;
+    vioderW=98/100*screen.width;
+    vioderH=vioder*vioderW;
+    vid.style.paddingTop = ((screen.height-vioderH)/2)+"px";
+
+    document.getElementsByClassName("goblinmaster")[0].style.bottom = "0px";
+    document.getElementsByClassName("goblinmaster")[0].style.position = "fixed";
+    document.getElementsByClassName("goblinmaster")[0].style.width = "99.5%";
+  }else{
+    vid.style.paddingTop = "0px";
+    document.getElementsByClassName("goblinmaster")[0].style.bottom = "0px";
+    document.getElementsByClassName("goblinmaster")[0].style.position = "fixed";
+    document.getElementsByClassName("goblinmaster")[0].style.width = "99.5%";
+  }
+}
+
+if(vid.offsetHeight>screen.height)
+vid.style.height=screen.height+"px";
+},1);
+
+
+
+
+
+
+
+function togglePictureInPicture() {
+  if (document.pictureInPictureElement) {
+      document.exitPictureInPicture();
+  } else {
+    if (document.pictureInPictureEnabled) {
+      vid.requestPictureInPicture();
+    }
+  }
+}
+var tgLink=1;
+function toogleChaLink(xyz){
+tgLink++;
+if(tgLink%2==0)
+xyz.style.height="130px";
+else
+xyz.style.height="15px";
+}
+</script> 
+
+<style>
+body{
+background-color:#050505;
+color:rgba(255, 255, 255, 0.459);
+  overflow:hidden;
+user-select:none;
+}
+button{
+background-color:#4e4e4e;
+color:white;
+border:0.01px solid #616161;
+}
+
+.btnpla23fe{
+  position:relative;
+  height: auto;
+  width:99.5%;
+}
+.pic23s{
+position: absolute;
+  right: 10px;
+  text-align: center;
+  bottom:0px;
+ padding: 6px; /* Full-width */
+ border:0.1px solid rgba(255, 0, 0, 0.32);
+ background-color:#43434384;
+ color:white;
+ font-size: 19px;
+}
+
+.thepla23{
+  position:relative;
+  height: auto;
+  width:100%;
+}
+#chapter23{
+position: absolute;
+  right: 0px;
+  text-align: center;
+  top:0px;
+ width: 110px; /* Full-width */
+ border:3px solid red;
+ background-color:#8c8c8c6f;
+ color:white;
+ font-size: 19px;
+}
+
+#allcha{
+  display:none;
+}
+
+
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 99.5%; /* Full-width */
+  height: 8px; /* Specified height */
+  background: #aaaaaa65; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.9; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  box-shadow: inset 0 0 15px black;
+  overflow: hidden;
+  margin-bottom:8px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #00ccff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition:background-color 0.3s ease-in;
+  box-shadow: -2000px 0px 0px 1988px #0095ff;
+  border: 2px solid #0618be;
+}
+.slider::-moz-range-thumb {
+  background: #0296ff;
+  width: 12px;
+  height: 22px;
+  border-radius: none;
+  cursor: pointer;
+  box-shadow: -2000px 0px 0px 1988px #35729e;
+  border: 2px solid #00031d;
+}
+
+.slider2 {
+  -webkit-appearance: none;
+  height: 5px;
+  border-radius: 5px;  
+  background: #2e2e2e;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  overflow: hidden;
+  transition: opacity .2s;
+}
+
+.slider2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%; 
+  background: #6a00ff2d;  /*good purple #9551f5*/
+  box-shadow: -2000px 0px 0px 1995px #a884db;
+  cursor: pointer;
+}
+
+.slider2::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #6a00ff3b;
+  box-shadow: -2000px 0px 0px 1985px #a884db;
+  cursor: pointer;
+}
+#myVideo{
+  transform: translateX(-5.8px) translateY(-0px);
+  width:100%;
+  cursor: url("file:///C:/Users/ssb/Desktop/Him%20coder/Final%20video%20player/hyper2.cur"), auto;
+}
+.goblinmaster{
+  position:absolute;
+  bottom: 100px;
+  left:0px;
+}
+.spacing{
+  position:absolute;
+  bottom: 0px;
+  left:0px;
+  width:100%;
+  height: 0px;
+  z-index:-1;
+}
+</style>
+
+<!--Chapters-->
+<script> 
+vid.style.width=screen.width+"px";
+ function visibile(){
+         document.getElementById("allcha").style.display='block';
+         document.getElementById('remove3').style.display='inline';
+         document.getElementById('chapter23').style.backgroundColor="rgb(0, 0, 0, 0.43)";
+         document.getElementById('chapter23').style.color="white";
+         document.getElementsByClassName("pic23s")[0].style.visibility="visible";
+ }
+ function hidemeplz(){
+   document.getElementById("allcha").style.display='none';
+   document.getElementById('remove3').style.display='none';
+         document.getElementById('chapter23').style.backgroundColor="#8c8c8c6f";
+         document.getElementById('chapter23').style.color="#fff";
+         document.getElementsByClassName("pic23s")[0].style.visibility="hidden";
+ }
+ function gotofolow234(time23fe){
+   if(time23fe.length<=4){
+    time23fe="0:"+time23fe;
+   }
+    var actualTime = time23fe.split(':');
+    var totalSeconds = (+actualTime[0]) * 60 * 60 + (+actualTime[1]) * 60 + (+actualTime[2]);
+    vid.currentTime=totalSeconds;
+ }
+
+
+
+
+var mouseMove=false,vidTime;
+setInterval(function(){
+  if(mouseMove==false){
+  document.getElementsByClassName("slider")[0].value=(vid.currentTime/vid.duration)*10000;
+    if(vsd3d6%2==0)vid.play();
+}
+  else{
+    if(vsd3d6%2!=0){vid.pause();}
+    vid.currentTime=document.getElementsByClassName("slider")[0].value/10000*vid.duration;
+  }
+  
+},10);
+
+
+
+
+setInterval(function(){
+  if(deiurb42!=1){
+    hideme();
+    hidemeplz();
+  }
+},4000);
+
+  </script>
+  <!-- https://github.com/niklasvh/html2canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.4/html2canvas.min.js"></script>
+  <script>
+  function capture2() {
+    html2canvas(document.body).then((canvas) => {
+    let a = document.createElement("a");
+    a.download = "ss.png";
+    a.href = canvas.toDataURL("image/png");
+    a.click(); // MAY NOT ALWAYS WORK!
+      });
+  }
+  </script>
+    <script>
+      var videoId = 'myVideo';
+        var scaleFactor = 0.25;
+        var snapshots = [];
+    
+        /**
+         * Captures a image frame from the provided video element.
+         *
+         * @param {Video} video HTML5 video element from where the image frame will be captured.
+         * @param {Number} scaleFactor Factor to scale the canvas element that will be return. This is an optional parameter.
+         *
+         * @return {Canvas}
+         */
+        function capture(video, scaleFactor) {
+                scaleFactor = 2;
+            var w = video.videoWidth * scaleFactor;
+            var h = video.videoHeight * scaleFactor;
+            var canvas = document.createElement('canvas');
+            canvas.width = w;
+            canvas.height = h;
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, w, h);
+            
+            
+            return canvas;
+        }
+    
+        /**
+         * Invokes the <code>capture</code> function and attaches the canvas element to the DOM.
+         */
+        function shoot() {
+            var video = document.getElementById(videoId);
+            var output = document.getElementById('output');
+            var canvas = capture(video, scaleFactor);
+            snapshots.unshift(canvas);
+            for (var i = 0; i < 4; i++) {
+                output.appendChild(snapshots[i]);
+            }
+        }
+    
+    (function() {
+      var captureit = document.getElementById('cit');
+      captureit.click();
+    })();
+
+      </script>
+      <style>
+      </style>
+</body> 
+</html>
