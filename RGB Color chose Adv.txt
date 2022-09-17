@@ -1,0 +1,162 @@
+<html>
+<meta name='viewport' content="width=device-width">
+<style>
+.ch_zero{
+text-align:center;
+position:relative;
+left:6.5px;
+}
+.ch_oo{
+position:relative;
+bottom:12.6px;
+right:6.35px;
+font-size:42px;
+}
+.chBgcolor{
+position: absolute;
+top:5px;
+left:5px;
+height:35px;
+width:35px;
+background-color:RGBa(45,45,45,0.3);
+color:rgba(255,255,255,0.5);
+display:flex;
+align-items:center;
+place-content:center;
+transform:rotate(90deg);
+font-size:26px;
+border-radius:4px;
+user-select:none;
+}
+
+
+
+
+
+body{
+display:grid;
+place-content:center;
+align-items:center;
+margin-top:2%;
+font-family: Helvetica,san-serif;
+background-color:RGB(25,25,25);
+color:white;
+}
+.color_rgb{
+background-color:RGB(125, 99, 250);
+height:50px;
+width:300px;
+margin-top:30px;
+display:grid;
+place-content:center;
+align-items:center;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cName{
+text-align:center;
+}
+</style>
+<body>
+
+
+<div class="chBgcolor" onclick="chBgColor()"><br><br><br><span class="ch_zero">0</span><span class="ch_oo">.</span></div>
+
+
+
+<div class="color_rgb" id="col23" onclick="copyTxt()"><input style="font-size:18px;border:none; text-align:center" id="col2" value="rgb(50,50,50)"></div><br>
+<p class="cName">RED</p>
+<input type="range" id="red" value="50" min="0" max="255"><br>
+<p class="cName" id="red2">00</p>
+<p class="cName">GREEN</p>
+<input type="range" id="green" value="50" min="0" max="255"><br>
+<p class="cName" id="green2">00</p>
+<p class="cName">BLUE</p>
+<input type="range" id="blue" value="50" min="0" max="255"><br>
+<p class="cName" id="blue2">00</p>
+<p class="cName">Transparency</p>
+<input type="range" id="aa" value="10" min="0" max="10"><br>
+<p class="cName" id="aa2">1.0</p>
+</body>
+<script>
+var red,gre,blu,aa;
+red=document.getElementById("red").value;
+gre=document.getElementById("green").value;
+blu=document.getElementById("blue").value;
+aa=document.getElementById("aa").value;
+
+//changing bg color btn
+var count89=1,bgCall=0;
+function chBgColor(){
+count89++;
+var bgColon;
+if(count89%2==0){
+bgCall=1;
+bgColon= setInterval(chaBody,1);
+}else{
+clearTimeout(bgColon);
+bgCall=0;
+document.body.style.backgroundColor="RGB(25,25,25)";
+document.body.style.color="RGB(255,255,255)";
+}
+}
+function chaBody(){
+if(bgCall!=0)
+{
+document.body.style.backgroundColor="RGBA("+red+","+gre+","+blu+","+aa+")";
+if((red*0.299 + gre*0.587 + blu*0.114) > 186) 
+document.body.style.color="RGB(0,0,0)";
+else
+document.body.style.color="white";
+
+}
+
+}
+
+
+setInterval(function(){
+red=document.getElementById("red").value;
+gre=document.getElementById("green").value;
+blu=document.getElementById("blue").value;
+aa=document.getElementById("aa").value;
+
+if((red*0.299 + gre*0.587 + blu*0.114) > 186) 
+document.getElementById("col2").style.color="RGB(0,0,0)";
+else
+document.getElementById("col2").style.color="RGB(255,255,255)";
+
+
+blu=(blu<10)?"0"+blu:blu;
+red=(red<10)?"0"+red:red;
+gre=(gre<10)?"0"+gre:gre;
+aa/=10;
+aa=(aa==0 || aa==1)?aa+".0":aa;
+
+
+document.getElementById("red2"). innerHTML=red;
+document.getElementById("green2"). innerHTML=gre;
+document.getElementById("blue2"). innerHTML=blu;
+document.getElementById("aa2"). innerHTML=aa;
+document.getElementById("col2").style.backgroundColor="RGBA("+red+","+gre+","+blu+","+(aa-0.9)+")"; 
+document.getElementById("col23").style.backgroundColor="RGBA("+red+","+gre+","+blu+","+aa+")"; 
+document.getElementById("col2"). value="rgba("+red+","+gre+","+blu+","+aa+")"; 
+},1);
+
+
+function copyTxt(){
+   var copyText = document.getElementById("col2");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+copyText.select();
+  document.execCommand("copy");  
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+
+
+}
+</script>
+</html>
